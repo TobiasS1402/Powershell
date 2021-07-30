@@ -48,10 +48,10 @@ function Update-PartnerUserPassword {
     #Match any userprincipalname format: [*username@customertenant.com]
     $searchcriterium = "^.*($Username)@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
 
-    #Empty Powershell array#>
+    #Empty Powershell array
     $resultArray = @()
 
-    #Empty progression bar#>
+    #Empty progression bar
     $progress = 0
 
     #Gets all partnercustomers
