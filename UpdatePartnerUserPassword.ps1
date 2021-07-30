@@ -15,8 +15,8 @@ function Update-PartnerUserPassword {
         This script can be used by MSP's to change the username of a username that is present in multiple partner tenants
 
         .PARAMETER Username
-        A userprincipalname possible prepended by a random string to run the search method on.
-        Examples: test@testdomain.com, testtest@domain.com, admin_test@domain.com
+        A userprincipalname possibly prepended by a random string to run the search method on.
+        Examples of usernames with param $Username = test: test@testdomain.com, testtest@domain.com, admin_test@domain.com
 
         .PARAMETER Newpassword
         The password that will be set for the selected users with Userprincipalname
