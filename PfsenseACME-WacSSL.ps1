@@ -59,7 +59,7 @@ catch {
 }
 
 #merge pfx for Windows Admin Center and import the certificate into the personal LocalMachine store
-certutil.exe -p "$PFXPASSWORD,$PFXPASSWORD" -f -MergePFX $CERTDIR\intranet.crt $CERTDIR\intranet.pfx
+certutil.exe -p "$PFXPASSWORD,$PFXPASSWORD" -f -MergePFX $CERTDIR\$CERTNAME.crt $CERTDIR\$CERTNAME.pfx
 $thumbprint = Import-pfxCertificate -FilePath "$CERTDIR\$CERTNAME.pfx" -password (ConvertTo-SecureString $PFXPASSWORD -AsPlainText -Force) -CertStoreLocation Cert:\LocalMachine\My | Select-Object -ExpandProperty Thumbprint
 
 #Cleanup actions for the certificates
